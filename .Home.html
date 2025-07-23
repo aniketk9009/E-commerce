@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AniketShop - Last View</title>
+<link rel="stylesheet" href="style.css">
+<style>
+
+</style>
+</head>
+<body>
+
+<header>
+
+  <div>
+    🛒 Cart Items: <span id="cart-count">0</span> |
+    💰 Total: ₹<span id="cart-total">0</span>
+  </div>
+</header>
+
+<section>
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="https://images.meesho.com/images/products/437272259/hjnyb_512.avif?width=512" alt="">
+      <h3>Marbel Wallpaper</h3>
+      <p>Marble Wallpaper Peel and Stick Waterproof Kitchen Countertop Wallpaper for Cabinets</p>
+      <strong><p>₹89</p></strong>
+      <p>M.R.P.: ₹199 - 43% off</p>
+      <button class="add-to-cart" data-price="89">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.meesho.com/images/products/491419026/fb4ak_512.avif?width=512" alt="">
+      <h3>Sticker</h3>
+      <p>Switch Board Sticker Grass pack of 12 pcs</p>
+      <strong><p>₹99</p></strong>
+      <p>M.R.P.: ₹199 - 52% off</p>
+      <button class="add-to-cart" data-price="99">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.meesho.com/images/products/73992052/qvig8_512.avif?width=512" alt="">
+      <h3>Mug</h3>
+      <p>Magic light mug (Material: Plastic)</p>
+      <strong><p>₹999</p></strong>
+      <p>M.R.P.: ₹1,900 - 22% off</p>
+      <button class="add-to-cart" data-price="999">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRHtgH8g41-tJQQ14SepXV5lJ_kKdpIVcaIA&s" alt="Redmi TV">
+      <h3>Smart T.V.</h3>
+      <p>Redmi Xiaomi 80cm (32 inch) F Series</p>
+      <strong><p>₹19999</p></strong>
+      <p>M.R.P.: ₹29900 - 12% off</p>
+      <button class="add-to-cart" data-price="19999">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.meesho.com/images/products/538801346/3vofh_512.avif?width=512" alt="">
+      <h3>Key Holder</h3>
+      <p>Wooden Krishna key holder, Stylish Home Decor</p>
+      <strong><p>₹99</p></strong>
+      <p>M.R.P.: ₹900 - 92% off</p>
+      <button class="add-to-cart" data-price="99">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<script>
+// Cart Logic
+let cartCount = 0;
+let cartTotal = 0;
+
+const cartCountEl = document.getElementById("cart-count");
+const cartTotalEl = document.getElementById("cart-total");
+
+const buttons = document.querySelectorAll(".add-to-cart");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    cartCount++;
+    cartCountEl.textContent = cartCount;
+
+    const price = parseInt(btn.getAttribute("data-price"));
+    cartTotal += price;
+    cartTotalEl.textContent = cartTotal;
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AniketShop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="logo">Aniket<span>Shop</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="Electronics.html">Electronics</a></li>
+        <li><a href=".Home.html">.Home</a></li>
+        <li><a href="Kids.html">Kids</a></li>
+        <li><a href="Man.html">Man</a></li>
+        <li><a href="Woman.html">Woman</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+ <div class="product-grid">
+      <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnJguubim7n6zuRfe7tPsGi2smdW1woAyGjw&s" alt="Bat">
+        <h3>Pro Cricket Bat</h3>
+        Cricket Bat | Hard Plastic Bat Full Size & Comfort Grip
+        <b><p>₹5,499</p></b>
+        <P>₹9,999 -66%off</P>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBe967Ezt52zcF9B5K54KQlZF_TAh0kOQXWQ&s" alt="Gloves">
+        <h3>Premium Gloves</h3>
+        iLife ZaySoo Warm Black 1 Pair Leather Snow Proof Winter Gloves
+        <b><p>₹1,299</p></b>
+        <p>₹4,999 -45%off</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/e2b295a0-c99a-4d70-8704-4727c7c13077.__CR0,0,970,600_PT0_SX970_V1___.png" alt="Helmet">
+        <h3>Safety Helmet</h3>
+        6PCS Safety Helmet Construction Protective Helmets
+      <b>  <p>₹2,999</p></b>
+      <p>₹5,999 -10%off</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://cdnmedia.dsc-cricket.com/media/catalog/product/cache/5b0ea239e50527b43e3253a7f103e237/j/a/jaffa--n.webp" alt="Shoes">
+        <h3>Cricket Shoes</h3>
+        Destony Professional Cricket All Rounder Player Shoes For Mans
+       <b> <p>₹3,499</p></b>
+       <p>₹8,000 -50%off</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj9dEFMDZG32etPpUbUgtYzTEQGByJQbbPug&s" alt="T-Shirt">
+    <h3>T-Shirt</h3>
+    <p>Aflix Stylish Multicolored Cotton Blend Solid T-Shirt For Men</p>
+    <strong><p>₹299</p></strong>
+    <p>M.R.P.: ₹499 -43% off</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/71dq+HOiN0L._UF350,350_QL80_.jpg" alt="Bluetooth Earbuds">
+    <h3>Bluetooth Earbuds</h3>
+    <p>TWS Airpodes 121 Pro plus, 100HRS Battery, 4mics Enx,50ms latency</p>
+    <strong><p>₹1,999</p></strong>
+    <p>M.R.P.: ₹4,999 -72% off</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZpxMrjsbJHVChRd2oLDHLMdd8IekSR9gzrA&s" alt="Water Heater">
+    <h3>Water Heater</h3>
+    <p>UGC 2000w Premium Immersion Water Heater</p>
+    <strong><p>₹999</p></strong>
+    <p>M.R.P.: ₹4,999 -62% off</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZzXWP8_qHxU2J16Xp68PQdLJCQTW2_f7AAA&s" alt="Airfresher">
+    <h3>Airfresher</h3>
+    <p>Room wooden diffuser airfresher</p>
+    <strong><p>₹299</p></strong>
+    <p>M.R.P.: ₹499 -43% off</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <script>
+// Cart Logic
+let cartCount = 0;
+let cartTotal = 0;
+
+const cartCountEl = document.getElementById("cart-count");
+const cartTotalEl = document.getElementById("cart-total");
+
+const buttons = document.querySelectorAll(".add-to-cart");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    cartCount++;
+    cartCountEl.textContent = cartCount;
+
+    const price = parseInt(btn.getAttribute("data-price"));
+    cartTotal += price;
+    cartTotalEl.textContent = cartTotal;
+  });
+});
+</script>
+
+  
+
+</body>
+</html>>
+</html>
+
